@@ -36,10 +36,6 @@ export default function Home() {
         </div>
 
         <div className="w-full px-4">
-          <Media />
-        </div>
-
-        <div className="w-full px-4">
           <Reviews />
         </div>
       </div>
