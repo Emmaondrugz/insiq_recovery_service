@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -5,6 +6,8 @@ import Services from "./components/Services";
 import Experts from "./components/Experts"
 import Media from "./components/Media";
 import Reviews from "./components/Reviews"
+import Whyus from "./components/Whyus";
+import Blogs from "./components/Blogs";
 
 export default function Home() {
   return (
@@ -37,6 +40,14 @@ export default function Home() {
 
         <div className="w-full px-4">
           <Reviews />
+        </div>
+
+        <div className="w-full px-4 bg-[#f8faf9]">
+          <Whyus />
+        </div>
+
+        <div className="w-full px-4">
+          <Blogs />
         </div>
       </div>
     </div>

@@ -5,36 +5,40 @@ const experts = [
         name: "Marcus Reed",
         position: "Lead Recovery Specialist",
         badge: "Senior",
-        image: "/worker1.png",
+        image: "/team2.jpg",
+        bio: "Has over 12 years of experience leading complex asset recovery operations.",
     },
     {
         name: "Sofia Anderson",
         position: "Digital Forensics Expert",
         badge: "Expert",
-        image: "/worker2.png",
+        image: "/team4.jpg",
+        bio: "Specialises in tracing digital footprints left by cybercriminals.",
     },
     {
         name: "James Whitfield",
         position: "Cyber Threat Analyst",
         badge: "Senior",
-        image: "/worker3.png",
+        image: "/team1.jpg",
+        bio: "Monitors and analyses emerging cyber threats.",
     },
     {
         name: "J Cooper",
         position: "Asset Recovery Advisor",
         badge: "Expert",
-        image: "/worker4.png",
+        image: "/team3.jpg",
+        bio: "Brings a sharp legal and financial background to every case.",
     },
 ];
 
 export default function Experts() {
     return (
         <div
-            className="flex justify-center flex-col bg-white py-20"
+            className="flex justify-center flex-col py-20"
             style={{ fontFamily: "'Poppins', sans-serif" }}
         >
             {/* Header */}
-            <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center max-w-[1100px] mx-auto gap-6 mb-14 px-6">
+            <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center max-w-[1100px] mx-auto gap-6 mb-14 ">
                 <div className="sm:text-5xl text-3xl font-semibold leading-tight shrink-0 text-[#0f1a14] tracking-tight">
                     The Experts Behind <br /> Our Services
                 </div>
@@ -45,50 +49,34 @@ export default function Experts() {
             </div>
 
             {/* Cards grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-[1100px] mx-auto w-full px-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-[1100px] mx-auto w-full sm:px-6">
                 {experts.map((expert) => (
                     <div
                         key={expert.name}
-                        className="group bg-white border border-[#e4ede7] rounded-[20px] overflow-hidden"
+                        className="group bg-white max-w-[400px] w-full overflow-hidden"
                     >
-                        {/* Image */}
-                        <div className="relative w-full overflow-hidden bg-[#e8f2eb]" style={{ aspectRatio: "4/3.5" }}>
+                        <div className="relative h-[300px] sm:h-[400px] w-full overflow-hidden bg-[#e8f2eb]" style={{ aspectRatio: "4/3.5" }}>
                             <Image
                                 src={expert.image}
                                 alt={expert.name}
+                                sizes="100"
+                                quality={60}
                                 fill
                                 className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                             />
                         </div>
 
-                        {/* Body */}
-                        <div className="px-5 pt-5 pb-5 bg-[#f9f9f9] mb-2 mx-2 rounded-b-lg">
-                            <p className="text-[17px] font-semibold text-[#0f1a14] tracking-tight mb-1">
+                        {/* Text below image */}
+                        <div className="px-4 py-3">
+                            <p className="text-[17px] font-semibold text-[#0f1a14] tracking-tight mb-0.5">
                                 {expert.name}
                             </p>
-                            <p className="text-[12.5px] font-medium text-gray-600 mb-4">
+                            <p className="text-[12.5px] font-normal text-gray-500 mb-2">
                                 {expert.position}
                             </p>
-                            <button
-                                className="flex items-center justify-center gap-2 w-full py-2.5
-                            border border-[#d1eada] rounded-[10px]
-                            text-[13px] font-semibold
-                           transition-all duration-200
-                           bg-[#248A3A]  text-white"
-                            >
-                                <svg
-                                    viewBox="0 0 24 24"
-                                    className="w-3.5 h-3.5"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    strokeWidth={2.2}
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                >
-                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                                </svg>
-                                Reach Out
-                            </button>
+                            <p className="text-[13px] text-gray-600 leading-relaxed line-clamp-3">
+                                {expert.bio}
+                            </p>
                         </div>
                     </div>
                 ))}

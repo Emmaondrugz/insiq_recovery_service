@@ -61,7 +61,7 @@ export default function Services() {
                          group"
                     >
                         {/* Top accent bar on hover */}
-                        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#248A3A] to-[#5dba72] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                        <div className="absolute top-0 left-0 right-0 h-[3px] bg-linear-to-r from-[#248A3A] to-[#5dba72] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                         {/* Icon */}
                         <div className="w-13 h-13 rounded-[14px] bg-[#248A3A] flex items-center justify-center mb-6" style={{ width: 52, height: 52 }}>

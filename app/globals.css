@@ -9,7 +9,6 @@ nextjs-portal {
 
 body {
   font-family: var(--font-poppins);
-  overflow: auto !important;
 }
 
 .poppins {

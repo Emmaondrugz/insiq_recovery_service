@@ -1,13 +1,8 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
-const NAV_LINKS = [
-    { label: "Features", href: "#features" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "Docs", href: "#docs" },
-    { label: "About", href: "#about" },
-];
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +10,7 @@ export default function Header() {
     return (
         <>
             {/* Header */}
-            <div className="flex justify-between py-4 items-center relative z-60 bg-transparent">
+            <div className="flex justify-between py-4 items-center relative z-100 bg-transparent">
                 {/* Logo Section */}
                 <div className="flex items-center gap-2">
                     <img src="/insiq.png" alt="logo" className="w-12 md:w-16" />
@@ -28,10 +23,10 @@ export default function Header() {
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex justify-between gap-8 xl:gap-20 items-center">
                     <div className="flex gap-4 xl:gap-5 items-center">
-                        <a href="" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Articles</a>
+                        <Link href="/Articles" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Articles</Link>
                         <a href="" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Experts</a>
                         <a href="" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Reviews</a>
-                        <a href="" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Contact</a>
+                        <Link href="/Contact-us" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Contact-us</Link>
                     </div>
 
                     <button className="flex items-center shadow-xs justify-center px-4 py-2.5 gap-2 bg-[#248A3A] text-white rounded hover:bg-[#1a6b2d] transition-colors">
@@ -59,35 +54,32 @@ export default function Header() {
             </div>
 
             {/* Mobile Side Navigation - Slides from LEFT */}
-            {/* Backdrop */}
-            <div
-                className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden transition-opacity duration-300 ${menuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}
-                onClick={() => setMenuOpen(false)}
-            />
 
             {/* Side Panel */}
             <div
                 className={`fixed top-0 left-0 h-full w-full bg-white z-50 lg:hidden transform transition-transform duration-300 ease-out shadow-2xl ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}
             >
                 {/* Side Nav Content */}
-                <div className="pt-22 px-2">
+                <div className="pt-17 px-2">
                     {/* Navigation Links */}
                     <nav className="space-y-1">
-
                         <div className="my-4 border-t border-gray-100"></div>
 
-                        <a href="" className="block py-3 px-4 text-black text-lg font-normal">
+                        <Link href="/Articles" className="block py-3 px-4 text-black text-lg font-normal">
                             Articles
-                        </a>
-                        <a href="" className="block py-3 px-4 text-black text-lg font-normal">
+                        </Link>
+
+                        <a href="#experts" className="block py-3 px-4 text-black text-lg font-normal">
                             Experts
                         </a>
-                        <a href="" className="block py-3 px-4 text-black text-lg font-normal">
+
+                        <a href="#reviews" className="block py-3 px-4 text-black text-lg font-normal">
                             Reviews
                         </a>
-                        <a href="" className="block py-3 px-4 text-black text-lg font-normal">
-                            Contact
-                        </a>
+
+                        <Link href="/Contact-us" className="block py-3 px-4 text-black text-lg font-normal">
+                            Contact Us
+                        </Link>
                     </nav>
 
                     {/* CTA Button */}

@@ -1,5 +1,7 @@
-import Image from "next/image";
+'use client'
 
+import Image from "next/image";
+import { useState } from "react";
 
 const reviews = [
     {
@@ -56,7 +58,7 @@ const reviews = [
         image: "/commentor6.png",
         source: "Google",
         comment:
-            "Fast, reliable, and very professional service. The team handled everything smoothly and kept communication consistent. I’m really satisfied with how everything turned out.",
+            "Fast, reliable, and very professional service. The team handled everything smoothly and kept communication consistent. I'm really satisfied with how everything turned out.",
     },
     {
         id: 8,
@@ -96,12 +98,12 @@ const reviews = [
         image: undefined,
         source: "Google",
         comment:
-            "They clearly know what they’re doing. I had tried other options before with no success, but Insiq delivered results where others couldn’t.",
+            "They clearly know what they're doing. I had tried other options before with no success, but Insiq delivered results where others couldn't.",
     },
     {
         id: 13,
         name: "Ibrahim U.",
-        image: "/stack1.jpg",
+        image: "/stack2.jpg",
         source: "Reddit",
         comment:
             "I was skeptical at first, but after seeing the results, I can confidently say this is a legit service. They handled my case professionally and delivered as promised.",
@@ -128,7 +130,7 @@ const reviews = [
         image: undefined,
         source: "Google",
         comment:
-            "Clear communication, professional approach, and real results. It’s rare to find a service that actually delivers like this.",
+            "Clear communication, professional approach, and real results. It's rare to find a service that actually delivers like this.",
     },
     {
         id: 17,
@@ -149,10 +151,10 @@ const reviews = [
     {
         id: 19,
         name: "Tunde F.",
-        image: "/stack1.jpg",
+        image: undefined,
         source: "Google",
         comment:
-            "Quick response, excellent service, and great communication. I’m very satisfied with the outcome.",
+            "Quick response, excellent service, and great communication. I'm very satisfied with the outcome.",
     },
     {
         id: 20,
@@ -160,7 +162,7 @@ const reviews = [
         image: 'commentor10.png',
         source: "Google",
         comment:
-            "Very reliable and professional. They handled everything smoothly and delivered results. I’d recommend them to anyone needing recovery help.",
+            "Very reliable and professional. They handled everything smoothly and delivered results. I'd recommend them to anyone needing recovery help.",
     },
 ];
 
@@ -175,6 +177,19 @@ const colors = [
 ];
 
 export default function Services() {
+    const [visibleCount, setVisibleCount] = useState(6);
+
+    const loadMore = () => {
+        if (visibleCount === 6) {
+            setVisibleCount(12);
+        } else if (visibleCount === 12) {
+            setVisibleCount(20);
+        }
+    };
+
+    const displayedReviews = reviews.slice(0, visibleCount);
+    const hasMore = visibleCount < reviews.length;
+
     return (
         <div
             className="flex justify-center flex-col py-20"
@@ -213,7 +228,7 @@ export default function Services() {
 
             {/* Reviews Grid */}
             <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-6 max-w-[1100px] mx-auto px-4">
-                {reviews.map((review) => (
+                {displayedReviews.map((review) => (
                     <div
                         key={review.id}
                         className="bg-white border border-gray-200 rounded-lg p-4 shadow-sm transition"
@@ -255,7 +270,7 @@ export default function Services() {
                             <img
                                 src="/google_logo.svg"
                                 alt="google"
-                                className="w-5 h-5"
+                                className="w-10 h-10"
                             />
                         </div>
 
@@ -283,6 +298,20 @@ export default function Services() {
                     </div>
                 ))}
             </div>
+
+            {/* Show More Button */}
+            {hasMore && (
+                <div className="flex justify-center mt-10">
+                    <button
+                        onClick={loadMore}
+                        className="px-8 py-3 bg-[#248A3A] text-white rounded-lg font-medium 
+                                   hover:bg-[#1a6b2d] transition-colors duration-200 
+                                   focus:outline-none focus:ring-2 focus:ring-[#248A3A] focus:ring-offset-2"
+                    >
+                        Show More Reviews
+                    </button>
+                </div>
+            )}
         </div>
     );
 }
