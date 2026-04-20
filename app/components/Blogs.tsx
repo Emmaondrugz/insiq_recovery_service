@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const blogs = [
     {
         image: '/guide_image1.avif',
@@ -52,7 +54,7 @@ export default function Blogs() {
                                 {b.body}
                             </div>
 
-                            <a href="" className="underline">Read more</a>
+                            <Link href="/Articles" className="underline">Read more</Link>
                         </div>
                     </div>))}
             </div>

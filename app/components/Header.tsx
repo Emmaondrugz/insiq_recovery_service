@@ -2,16 +2,31 @@
 
 import Link from "next/link";
 import { useState } from "react";
-
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const router = useRouter();
+    const pathname = usePathname();
+
+    const handleSectionNav = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+        e.preventDefault();
+
+        if (pathname === "/") {
+            // Already on home — just scroll
+            document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+        } else {
+            // On another page — go home, then scroll after navigation
+            router.push(`/#${sectionId}`);
+        }
+
+        setMenuOpen(false);
+    };
 
     return (
         <>
-            {/* Header */}
             <div className="flex justify-between py-4 items-center relative z-100 bg-transparent">
-                {/* Logo Section */}
+                {/* Logo */}
                 <div className="flex items-center gap-2">
                     <img src="/insiq.png" alt="logo" className="w-12 md:w-16" />
                     <div className="h-6 w-[2px] bg-black"></div>
@@ -23,9 +38,10 @@ export default function Header() {
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex justify-between gap-8 xl:gap-20 items-center">
                     <div className="flex gap-4 xl:gap-5 items-center">
+                        <Link href="/" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Home</Link>
                         <Link href="/Articles" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Articles</Link>
-                        <a href="" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Experts</a>
-                        <a href="" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Reviews</a>
+                        <a href="#experts" onClick={(e) => handleSectionNav(e, "experts")} className="text-sm xl:text-base hover:text-[#248A3A] transition-colors cursor-pointer">Experts</a>
+                        <a href="#reviews" onClick={(e) => handleSectionNav(e, "reviews")} className="text-sm xl:text-base hover:text-[#248A3A] transition-colors cursor-pointer">Reviews</a>
                         <Link href="/Contact-us" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Contact-us</Link>
                     </div>
 
@@ -39,50 +55,44 @@ export default function Header() {
                     </button>
                 </div>
 
-                {/* Hamburger Menu Button - EDIT THIS SECTION */}
-                {/* ========================================== */}
+                {/* Hamburger */}
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
                     className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus:outline-none"
                     aria-label="Toggle menu"
                 >
-                    {/* EDITABLE HAMBURGER LINES - Customize these spans */}
-                    <span className={`w-6 h-0.5 bg-black transition-all duration-300`}></span>
-                    <span className={`w-6 h-0.5 bg-black transition-all duration-300 `}></span>
+                    <span className="w-6 h-0.5 bg-black transition-all duration-300"></span>
+                    <span className="w-6 h-0.5 bg-black transition-all duration-300"></span>
                 </button>
-                {/* ========================================== */}
             </div>
 
-            {/* Mobile Side Navigation - Slides from LEFT */}
-
-            {/* Side Panel */}
-            <div
-                className={`fixed top-0 left-0 h-full w-full bg-white z-50 lg:hidden transform transition-transform duration-300 ease-out shadow-2xl ${menuOpen ? 'translate-x-0' : '-translate-x-full'}`}
-            >
-                {/* Side Nav Content */}
+            {/* Mobile Side Nav */}
+            <div className={`fixed top-0 left-0 h-full w-full bg-white z-50 lg:hidden transform transition-transform duration-300 ease-out shadow-2xl ${menuOpen ? "translate-x-0" : "-translate-x-full"}`}>
                 <div className="pt-17 px-2">
-                    {/* Navigation Links */}
                     <nav className="space-y-1">
                         <div className="my-4 border-t border-gray-100"></div>
 
-                        <Link href="/Articles" className="block py-3 px-4 text-black text-lg font-normal">
+                        <Link href="/" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-black text-lg font-normal">
+                            Home
+                        </Link>
+
+                        <Link href="/Articles" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-black text-lg font-normal">
                             Articles
                         </Link>
 
-                        <a href="#experts" className="block py-3 px-4 text-black text-lg font-normal">
+                        <a href="#experts" onClick={(e) => handleSectionNav(e, "experts")} className="block py-3 px-4 text-black text-lg font-normal">
                             Experts
                         </a>
 
-                        <a href="#reviews" className="block py-3 px-4 text-black text-lg font-normal">
+                        <a href="#reviews" onClick={(e) => handleSectionNav(e, "reviews")} className="block py-3 px-4 text-black text-lg font-normal">
                             Reviews
                         </a>
 
-                        <Link href="/Contact-us" className="block py-3 px-4 text-black text-lg font-normal">
+                        <Link href="/Contact-us" onClick={() => setMenuOpen(false)} className="block py-3 px-4 text-black text-lg font-normal">
                             Contact Us
                         </Link>
                     </nav>
 
-                    {/* CTA Button */}
                     <div className="mt-8 pt-6 border-t border-gray-100">
                         <button className="w-full flex items-center justify-center px-4 py-4 gap-2 bg-[#248A3A] text-white rounded hover:bg-[#1a6b2d] transition-colors font-medium">
                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#fff">
@@ -93,11 +103,8 @@ export default function Header() {
                     </div>
                 </div>
 
-                {/* Side Nav Footer */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gray-50">
-                    <p className="text-xs text-gray-500 text-center">
-                        © 2024 Insiq Recovery Services
-                    </p>
+                    <p className="text-xs text-gray-500 text-center">© 2024 Insiq Recovery Services</p>
                 </div>
             </div>
         </>

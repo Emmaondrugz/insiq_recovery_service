@@ -14,9 +14,9 @@ export default function Whyus() {
                 </div>
 
                 {/* Existing heading block — unchanged */}
-                <div className="w-full flex flex-col items-center text-left max-w-[600px] mx-auto gap-4">
+                <div className="w-full flex flex-col items-center text-center sm:text-left max-w-[600px] mx-auto gap-4">
                     <div className="sm:text-5xl text-3xl font-medium">
-                        Why Our clients Trust Us
+                        Why Our clients<br />Trust Us
                     </div>
                     <div className="border-l pl-5">
                         "Insiq security services gave me immediate expert assistance, spent a great deal of time pinning down the problem, and provided a high level of professionalism and service that most companies today can't even dream of. And Hacked.com did what was needed to help me to keep in touch with my 160,000+ friends on Facebook. I'm grateful, and I wish that Facebook would put Hacked.com in charge of its customer service.”

@@ -33,7 +33,8 @@ const experts = [
 
 export default function Experts() {
     return (
-        <div
+        <section
+            id="experts"
             className="flex justify-center flex-col py-20"
             style={{ fontFamily: "'Poppins', sans-serif" }}
         >
@@ -81,6 +82,6 @@ export default function Experts() {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 }

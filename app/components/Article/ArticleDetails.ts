@@ -1,4 +1,15 @@
-export const articles = [
+export type Article = {
+    id: number;
+    image: string;
+    author: string;
+    updatedAt: string;
+    heading: string;
+    subheading: string;
+    paragraphs: string[];
+};
+
+
+export const articles: Article[] = [
     {
         "id": 1,
         "image": "/blog1.avif",

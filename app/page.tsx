@@ -8,6 +8,8 @@ import Media from "./components/Media";
 import Reviews from "./components/Reviews"
 import Whyus from "./components/Whyus";
 import Blogs from "./components/Blogs";
+import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 export default function Home() {
   return (
@@ -49,7 +51,12 @@ export default function Home() {
         <div className="w-full px-4">
           <Blogs />
         </div>
+
+        <div className="w-full px-4">
+          <Footer />
+        </div>
       </div>
+      <BackToTop />
     </div>
   );
 }

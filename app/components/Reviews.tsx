@@ -191,7 +191,8 @@ export default function Services() {
     const hasMore = visibleCount < reviews.length;
 
     return (
-        <div
+        <section
+            id="reviews"
             className="flex justify-center flex-col py-20"
             style={{ fontFamily: "'Poppins', sans-serif" }}
         >
@@ -312,6 +313,6 @@ export default function Services() {
                     </button>
                 </div>
             )}
-        </div>
+        </section>
     );
 }
