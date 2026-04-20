@@ -16,6 +16,25 @@ export default function Footer() {
         }
     };
 
+    const partners = [
+        {
+            name: "Coinbase",
+            logo: "/coinbase.svg",
+        },
+        {
+            name: "Meta",
+            logo: "/meta.svg",
+        },
+        {
+            name: "TikTok",
+            logo: "/tiktok.svg",
+        },
+        {
+            name: "Binance",
+            logo: "/binance.svg",
+        },
+    ];
+
     return (
         <footer className="w-full border-t border-gray-100 bg-white mt-20">
             <div className="max-w-6xl mx-auto px-6 lg:px-20 py-14">
@@ -51,8 +70,29 @@ export default function Footer() {
                     </nav>
                 </div>
 
+                {/* Partners strip */}
+                <div className="mt-12 pt-8 border-t border-gray-100">
+                    <p className="text-xs font-medium uppercase tracking-widest text-gray-400 mb-6">
+                        Some Of Our Partners
+                    </p>
+                    <div className="flex flex-wrap items-center gap-8">
+                        {partners.map((partner) => (
+                            <div
+                                key={partner.name}
+                                className="flex items-center gap-2 transition-opacity"
+                            >
+                                <img
+                                    src={partner.logo}
+                                    alt={partner.name}
+                                    className="h-5 object-contain"
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
                 {/* Bottom bar */}
-                <div className="mt-12 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div className="mt-10 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3">
                     <p className="text-xs text-gray-400">
                         © 2024 Insiq Recovery Services. All rights reserved.
                     </p>
@@ -60,6 +100,7 @@ export default function Footer() {
                         Secure &middot; Confidential &middot; Professional
                     </p>
                 </div>
+
             </div>
         </footer>
     );

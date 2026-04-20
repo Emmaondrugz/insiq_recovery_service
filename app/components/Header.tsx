@@ -45,14 +45,16 @@ export default function Header() {
                         <Link href="/Contact-us" className="text-sm xl:text-base hover:text-[#248A3A] transition-colors">Contact-us</Link>
                     </div>
 
-                    <button className="flex items-center shadow-xs justify-center px-4 py-2.5 gap-2 bg-[#248A3A] text-white rounded hover:bg-[#1a6b2d] transition-colors">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#fff">
-                                <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12Z" />
-                            </svg>
-                        </div>
-                        Get Immediate Help - $29
-                    </button>
+                    <a href="https://wa.me/15073807317"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center sm:text-base text-sm shadow-xs justify-center px-8 py-2.5 gap-2 bg-[#248A3A] text-white rounded hover:bg-[#1a6b2d] transition-colors"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#fff">
+                            <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12Z" />
+                        </svg>
+                        Get Immediate Help
+                    </a>
                 </div>
 
                 {/* Hamburger */}
@@ -94,12 +96,16 @@ export default function Header() {
                     </nav>
 
                     <div className="mt-8 pt-6 border-t border-gray-100">
-                        <button className="w-full flex items-center justify-center px-4 py-4 gap-2 bg-[#248A3A] text-white rounded hover:bg-[#1a6b2d] transition-colors font-medium">
+                        <a href="https://wa.me/15073807317"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex items-center sm:text-base text-sm shadow-xs justify-center px-8 py-2.5 gap-2 bg-[#248A3A] text-white rounded hover:bg-[#1a6b2d] transition-colors"
+                        >
                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#fff">
                                 <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12Z" />
                             </svg>
-                            Get Immediate Help - $29
-                        </button>
+                            Get Immediate Help
+                        </a>
                     </div>
                 </div>
 

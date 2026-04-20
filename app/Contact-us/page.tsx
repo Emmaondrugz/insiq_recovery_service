@@ -12,7 +12,7 @@ export default function Contact() {
         const lastName = (form.elements.namedItem("lastName") as HTMLInputElement).value
         const email = (form.elements.namedItem("email") as HTMLInputElement).value
 
-        const recipient = "support@insiqrecovery.com"
+        const recipient = "insiqrecovery@gmail.com"
         const subject = encodeURIComponent(`Recovery Request from ${firstName} ${lastName}`)
         const body = encodeURIComponent(
             `Hello Insiq Recovery Services,\n\nMy name is ${firstName} ${lastName} and I would like to reach out regarding account recovery.\n\nMy email address is: ${email}\n\nPlease get back to me at your earliest convenience.\n\nThank you.`
