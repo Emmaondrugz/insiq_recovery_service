@@ -18,7 +18,13 @@ export default function Contact() {
             `Hello Insiq Recovery Services,\n\nMy name is ${firstName} ${lastName} and I would like to reach out regarding account recovery.\n\nMy email address is: ${email}\n\nPlease get back to me at your earliest convenience.\n\nThank you.`
         )
 
-        window.open(`https://mail.google.com/mail/?view=cm&to=${recipient}&su=${subject}&body=${body}`, "_blank")
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+
+        if (isMobile) {
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`
+        } else {
+            window.open(`https://mail.google.com/mail/?view=cm&to=${recipient}&su=${subject}&body=${body}`, "_blank")
+        }
     }
 
     return (

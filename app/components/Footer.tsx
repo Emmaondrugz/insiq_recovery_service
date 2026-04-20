@@ -54,7 +54,7 @@ export default function Footer() {
                 {/* Bottom bar */}
                 <div className="mt-12 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3">
                     <p className="text-xs text-gray-400">
-                        © 2020 Insiq Recovery Services. All rights reserved.
+                        © 2024 Insiq Recovery Services. All rights reserved.
                     </p>
                     <p className="text-xs text-gray-400">
                         Secure &middot; Confidential &middot; Professional
