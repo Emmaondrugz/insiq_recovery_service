@@ -19,14 +19,14 @@ const experts = [
         name: "Isac Carpie",
         position: "Cybersecurity Expert",
         badge: "Expert",
-        image: "/Expert5.jpg",
+        image: "/Expert6.jpg",
         bio: "Tracks and analyses encrypted transaction trails to identify threat actors.",
     },
     {
         name: "Jovy William",
         position: "Financial Fraud Analyst",
         badge: "Expert",
-        image: "/Expert6.jpg",
+        image: "/Expert5.jpg",
         bio: "Specialises in identifying fraudulent financial activity and coordinating recovery.",
     },
     {
