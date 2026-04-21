@@ -39,7 +39,7 @@ export default function Footer() {
         },
         {
             name: "Kraken",
-            logo: "/Kraken.svg",
+            logo: "/kraken.svg",
         },
     ];
 
