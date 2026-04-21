@@ -20,21 +20,21 @@ const experts = [
         position: "Cybersecurity Expert",
         badge: "Expert",
         image: "/Expert5.jpg",
-        bio: "Tracks and analyses encrypted transaction trails to identify threat actors and recover compromised digital assets.",
+        bio: "Tracks and analyses encrypted transaction trails to identify threat actors.",
     },
     {
         name: "Jovy William",
         position: "Financial Fraud Analyst",
         badge: "Expert",
         image: "/Expert6.jpg",
-        bio: "Specialises in identifying fraudulent financial activity and coordinating recovery across banking and crypto platforms.",
+        bio: "Specialises in identifying fraudulent financial activity and coordinating recovery.",
     },
     {
         name: "James Whitfield",
         position: "Cyber Threat Analyst",
         badge: "Senior",
         image: "/team1.jpg",
-        bio: "Monitors and analyses emerging cyber threats.",
+        bio: "Monitors and analyses emerging cyber threats across banking and crypto platforms.",
     },
     {
         name: "J Cooper",
@@ -89,7 +89,7 @@ export default function Experts() {
                             <p className="text-[12.5px] font-normal text-gray-500 mb-2">
                                 {expert.position}
                             </p>
-                            <p className="text-[13px] text-gray-600 leading-relaxed line-clamp-3">
+                            <p className="text-[13px] text-black leading-relaxed line-clamp-3">
                                 {expert.bio}
                             </p>
                         </div>
