@@ -9,11 +9,25 @@ const experts = [
         bio: "Has over 12 years of experience leading complex asset recovery operations.",
     },
     {
-        name: "Sofia Anderson",
+        name: "Sofia Donavan",
         position: "Digital Forensics Expert",
         badge: "Expert",
         image: "/team4.jpg",
         bio: "Specialises in tracing digital footprints left by cybercriminals.",
+    },
+    {
+        name: "Isac Carpie",
+        position: "Cybersecurity Expert",
+        badge: "Expert",
+        image: "/Expert5.jpg",
+        bio: "Tracks and analyses encrypted transaction trails to identify threat actors and recover compromised digital assets.",
+    },
+    {
+        name: "Jovy William",
+        position: "Financial Fraud Analyst",
+        badge: "Expert",
+        image: "/Expert6.jpg",
+        bio: "Specialises in identifying fraudulent financial activity and coordinating recovery across banking and crypto platforms.",
     },
     {
         name: "James Whitfield",
@@ -50,7 +64,7 @@ export default function Experts() {
             </div>
 
             {/* Cards grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-[1100px] mx-auto w-full sm:px-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-[1100px] mx-auto w-full sm:px-6">
                 {experts.map((expert) => (
                     <div
                         key={expert.name}

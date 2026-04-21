@@ -33,6 +33,14 @@ export default function Footer() {
             name: "Binance",
             logo: "/binance.svg",
         },
+        {
+            name: "Paypal",
+            logo: "/paypal.svg",
+        },
+        {
+            name: "Kraken",
+            logo: "/Kraken.svg",
+        },
     ];
 
     return (
@@ -75,11 +83,11 @@ export default function Footer() {
                     <p className="text-xs font-medium uppercase tracking-widest text-gray-400 mb-6">
                         Some Of Our Partners
                     </p>
-                    <div className="flex flex-wrap items-center gap-8">
+                    <div className="grid grid-cols-3 sm:flex sm:flex-wrap items-center gap-6 sm:gap-8">
                         {partners.map((partner) => (
                             <div
                                 key={partner.name}
-                                className="flex items-center gap-2 transition-opacity"
+                                className="flex items-center justify-center gap-2 transition-opacity"
                             >
                                 <img
                                     src={partner.logo}
