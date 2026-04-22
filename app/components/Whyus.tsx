@@ -19,7 +19,7 @@ export default function Whyus() {
                         Why Our clients<br className="md:hidden"/>Trust Us
                     </div>
                     <div className="border-l pl-5">
-                        "Insiq security services gave me immediate expert assistance, spent a great deal of time pinning down the problem, and provided a high level of professionalism and service that most companies today can't even dream of. And Hacked.com did what was needed to help me to keep in touch with my 160,000+ friends on Facebook. I'm grateful, and I wish that Facebook would put Hacked.com in charge of its customer service.”
+                        "Insiq security services gave me immediate expert assistance, spent a great deal of time pinning down the problem, and provided a high level of professionalism and service that most companies today can't even dream of. And insiqrecovery.com did what was needed to help me to keep in touch with my 160,000+ friends on Facebook. I'm grateful, and I wish that Facebook would put insiqrecovery.com in charge of its customer service.”
                     </div>
                 </div>
             </div>
