@@ -14,14 +14,54 @@ const reviews = [
     },
     {
         id: 2,
-        name: "Sarah M.",
+        name: "James K.",
         image: '/commentor2.jpg',
+        source: "Google",
+        comment:
+            "I don't usually leave reviews, but I had to this time. When my Instagram got hacked, I felt completely helpless. Jovy kept me updated, explained every step, and didn't give me false hope. When I got my account back, I was honestly in shock. Really grateful for the professionalism.",
+    },
+    {
+        id: 3,
+        name: "Linda T.",
+        image: null,
+        source: "Google",
+        comment:
+            "I had already accepted my Facebook account was gone for good. Working with Jovy Williams changed everything. He handled my case with patience, explained every step clearly, and made sure I understood what was happening. The moment I regained access, I felt a huge weight lifted. Truly appreciate the dedication.",
+    },
+    {
+        id: 4,
+        name: "Marcus D.",
+        image: null,
+        source: "Google",
+        comment:
+            "Jovy Williams didn't just recover my account, he gave me peace of mind. He explained every step and made sure I was never left in the dark. That really helped ease my anxiety. Everything worked out in the end and I'm really grateful.",
+    },
+    {
+        id: 5,
+        name: "Priya N.",
+        image: "commentor4.jpg",
+        source: "Google",
+        comment:
+            "What I appreciate most about Jovy is the communication. Very responsive from start to finish. He kept me updated and reassured me throughout the whole process. I never felt left in the dark. Getting my account back was such a huge relief.",
+    },
+    {
+        id: 6,
+        name: "Daniel O.",
+        image: "/commentor6.png",
+        source: "Google",
+        comment:
+            "Losing account access affected me more than I expected. Jovy Williams stepped in, explained every step clearly, and made sure I understood what was happening throughout. When I finally logged back in, the relief was indescribable. I'm really thankful for the professionalism and support.",
+    },
+    {
+        id: 7,
+        name: "Sarah M.",
+        image: null,
         source: "Google",
         comment:
             "Very responsive team from start to finish. They explained every step clearly and made sure I understood what was happening. I never felt left in the dark, which really helped ease my anxiety about the situation.",
     },
     {
-        id: 3,
+        id: 8,
         name: "Chinedu A.",
         image: "/commentor3.jpg",
         source: "Trustpilot",
@@ -29,23 +69,23 @@ const reviews = [
             "After weeks of trying to recover my funds myself with no success, I decided to give Insiq a try. They handled the case efficiently and managed to recover everything. I only wish I had reached out sooner.",
     },
     {
-        id: 4,
+        id: 9,
         name: "Michael T.",
-        image: "commentor4.jpg",
+        image: null,
         source: "Google",
         comment:
             "Professional and discreet service. I was worried about sharing sensitive information, but they handled everything securely and with care. The whole process felt very structured and trustworthy.",
     },
     {
-        id: 5,
+        id: 10,
         name: "Aisha B.",
-        image: "/commentor5.png",
+        image: null,
         source: "Google",
         comment:
             "They actually deliver on what they promise. The team was supportive, patient, and very knowledgeable. I felt confident working with them and would recommend their services to anyone in a similar situation.",
     },
     {
-        id: 6,
+        id: 11,
         name: "David O.",
         image: undefined,
         source: "Reddit",
@@ -53,15 +93,15 @@ const reviews = [
             "I came across Insiq through an online recommendation and decided to give it a shot. I was skeptical at first, but they proved to be reliable and professional. The results spoke for themselves.",
     },
     {
-        id: 7,
+        id: 12,
         name: "James L.",
-        image: "/commentor6.png",
+        image: null,
         source: "Google",
         comment:
             "Fast, reliable, and very professional service. The team handled everything smoothly and kept communication consistent. I'm really satisfied with how everything turned out.",
     },
     {
-        id: 8,
+        id: 13,
         name: "Fatima S.",
         image: undefined,
         source: "Trustpilot",
@@ -69,7 +109,7 @@ const reviews = [
             "Communication was excellent throughout the entire process. They guided me step by step and were always available to answer questions. It made a stressful situation much easier to handle.",
     },
     {
-        id: 9,
+        id: 14,
         name: "Emeka N.",
         image: undefined,
         source: "Google",
@@ -77,7 +117,7 @@ const reviews = [
             "Recovered my hacked account within a few days. I had already lost hope, but they came through. The process was smooth and well-organized.",
     },
     {
-        id: 10,
+        id: 15,
         name: "Chris W.",
         image: undefined,
         source: "Google",
@@ -85,7 +125,7 @@ const reviews = [
             "Straightforward process and an honest team. No unnecessary delays or confusion. They did exactly what they said they would do.",
     },
     {
-        id: 11,
+        id: 16,
         name: "Zainab H.",
         image: "/stack3.jpg",
         source: "Trustpilot",
@@ -93,7 +133,7 @@ const reviews = [
             "Very smooth experience from start to finish. The support team was friendly and professional, and I felt reassured throughout the entire process.",
     },
     {
-        id: 12,
+        id: 17,
         name: "Brian C.",
         image: undefined,
         source: "Google",
@@ -101,7 +141,7 @@ const reviews = [
             "They clearly know what they're doing. I had tried other options before with no success, but Insiq delivered results where others couldn't.",
     },
     {
-        id: 13,
+        id: 18,
         name: "Ibrahim U.",
         image: "/stack2.jpg",
         source: "Reddit",
@@ -109,7 +149,7 @@ const reviews = [
             "I was skeptical at first, but after seeing the results, I can confidently say this is a legit service. They handled my case professionally and delivered as promised.",
     },
     {
-        id: 14,
+        id: 19,
         name: "Sophia R.",
         image: 'commentor7.png',
         source: "Google",
@@ -117,7 +157,7 @@ const reviews = [
             "Very helpful support team and quick turnaround time. They made the entire process feel simple and manageable.",
     },
     {
-        id: 15,
+        id: 20,
         name: "Kelvin P.",
         image: "/commentor8.png",
         source: "Trustpilot",
@@ -125,7 +165,7 @@ const reviews = [
             "They handled my case with urgency and care. I appreciated how seriously they took my situation and how quickly they acted.",
     },
     {
-        id: 16,
+        id: 21,
         name: "Grace E.",
         image: undefined,
         source: "Google",
@@ -133,7 +173,7 @@ const reviews = [
             "Clear communication, professional approach, and real results. It's rare to find a service that actually delivers like this.",
     },
     {
-        id: 17,
+        id: 22,
         name: "Victor D.",
         image: "/commentor9.png",
         source: "Google",
@@ -141,7 +181,7 @@ const reviews = [
             "Highly professional team. Everything was handled efficiently and with attention to detail. I would definitely use their services again if needed.",
     },
     {
-        id: 18,
+        id: 23,
         name: "Linda J.",
         image: undefined,
         source: "Trustpilot",
@@ -149,7 +189,7 @@ const reviews = [
             "They made a very stressful situation much easier to deal with. The support and reassurance they provided really stood out.",
     },
     {
-        id: 19,
+        id: 24,
         name: "Tunde F.",
         image: undefined,
         source: "Google",
@@ -157,7 +197,7 @@ const reviews = [
             "Quick response, excellent service, and great communication. I'm very satisfied with the outcome.",
     },
     {
-        id: 20,
+        id: 25,
         name: "Amanda K.",
         image: 'commentor10.png',
         source: "Google",

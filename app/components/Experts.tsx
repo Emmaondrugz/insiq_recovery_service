@@ -2,6 +2,13 @@ import Image from "next/image";
 
 const experts = [
     {
+        name: "Jovy William",
+        position: "Financial Fraud Analyst",
+        badge: "Expert",
+        image: "/Expert5.png",
+        bio: "Specialises in identifying fraudulent financial activity and coordinating recovery.",
+    },
+    {
         name: "Marcus Reed",
         position: "Lead Recovery Specialist",
         badge: "Senior",
@@ -21,13 +28,6 @@ const experts = [
         badge: "Expert",
         image: "/Expert6.jpg",
         bio: "Tracks and analyses encrypted transaction trails to identify threat actors.",
-    },
-    {
-        name: "Jovy William",
-        position: "Financial Fraud Analyst",
-        badge: "Expert",
-        image: "/Expert5.jpg",
-        bio: "Specialises in identifying fraudulent financial activity and coordinating recovery.",
     },
     {
         name: "James Whitfield",
