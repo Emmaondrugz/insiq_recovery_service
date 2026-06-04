@@ -10,199 +10,159 @@ const reviews = [
         image: "/commentor1.png",
         source: "Google",
         comment:
-            "I booked a home massage and was impressed by the professionalism. Very relaxing experience, worth every minute.",
+            "I honestly thought my account was gone for good after multiple failed attempts on my own. Insiq stepped in, handled everything professionally, and kept me updated throughout the process. I was surprised at how quickly they were able to resolve it. Definitely worth it.",
     },
     {
         id: 2,
-        name: "James K.",
+        name: "Sarah M.",
         image: '/commentor2.jpg',
         source: "Google",
         comment:
-            "Didn’t expect such quality at home. The therapist was skilled, punctual, and made the session incredibly soothing.",
+            "Very responsive team from start to finish. They explained every step clearly and made sure I understood what was happening. I never felt left in the dark, which really helped ease my anxiety about the situation.",
     },
     {
         id: 3,
-        name: "Linda T.",
-        image: null,
-        source: "Google",
-        comment:
-            "I felt completely relaxed after the session. Everything was handled professionally, and the atmosphere was calming throughout.",
-    },
-    {
-        id: 4,
-        name: "Marcus D.",
-        image: null,
-        source: "Google",
-        comment:
-            "Great service from start to finish. The massage helped ease my stress and tension more than expected.",
-    },
-    {
-        id: 5,
-        name: "Priya N.",
-        image: "commentor4.jpg",
-        source: "Google",
-        comment:
-            "What stood out most was the communication and professionalism. The massage itself was deeply relaxing and refreshing.",
-    },
-    {
-        id: 6,
-        name: "Daniel O.",
-        image: "/commentor6.png",
-        source: "Google",
-        comment:
-            "I didn’t realize how much I needed this. The session was calming, and the therapist was highly professional.",
-    },
-    {
-        id: 7,
-        name: "Sarah M.",
-        image: null,
-        source: "Google",
-        comment:
-            "Very responsive and professional team. The massage was relaxing, and the entire process felt smooth and well-organized.",
-    },
-    {
-        id: 8,
         name: "Chinedu A.",
         image: "/commentor3.jpg",
         source: "Trustpilot",
         comment:
-            "After a stressful week, this service was exactly what I needed. Professional, relaxing, and very convenient at home.",
+            "After weeks of trying to recover my funds myself with no success, I decided to give Insiq a try. They handled the case efficiently and managed to recover everything. I only wish I had reached out sooner.",
     },
     {
-        id: 9,
+        id: 4,
         name: "Michael T.",
-        image: null,
+        image: "commentor4.jpg",
         source: "Google",
         comment:
-            "Professional and discreet service. I felt comfortable throughout, and the massage helped me completely unwind.",
+            "Professional and discreet service. I was worried about sharing sensitive information, but they handled everything securely and with care. The whole process felt very structured and trustworthy.",
     },
     {
-        id: 10,
+        id: 5,
         name: "Aisha B.",
-        image: null,
+        image: "/commentor5.png",
         source: "Google",
         comment:
-            "They truly deliver quality service. The therapist was patient, skilled, and made the entire experience enjoyable and relaxing.",
+            "They actually deliver on what they promise. The team was supportive, patient, and very knowledgeable. I felt confident working with them and would recommend their services to anyone in a similar situation.",
     },
     {
-        id: 11,
+        id: 6,
         name: "David O.",
         image: undefined,
         source: "Reddit",
         comment:
-            "I was skeptical at first, but the service exceeded expectations. Very professional, and the results spoke for themselves.",
+            "I came across Insiq through an online recommendation and decided to give it a shot. I was skeptical at first, but they proved to be reliable and professional. The results spoke for themselves.",
     },
     {
-        id: 12,
+        id: 7,
         name: "James L.",
-        image: null,
+        image: "/commentor6.png",
         source: "Google",
         comment:
-            "Fast booking and excellent service. The massage was relaxing, and everything was handled professionally from start to finish.",
+            "Fast, reliable, and very professional service. The team handled everything smoothly and kept communication consistent. I'm really satisfied with how everything turned out.",
     },
     {
-        id: 13,
+        id: 8,
         name: "Fatima S.",
         image: undefined,
         source: "Trustpilot",
         comment:
-            "Communication was excellent, and the therapist was amazing. The session made a stressful day much easier to handle.",
+            "Communication was excellent throughout the entire process. They guided me step by step and were always available to answer questions. It made a stressful situation much easier to handle.",
     },
     {
-        id: 14,
+        id: 9,
         name: "Emeka N.",
         image: undefined,
         source: "Google",
         comment:
-            "Booked a session at home and it was perfect. The massage was relaxing, and everything felt well-organized.",
+            "Recovered my hacked account within a few days. I had already lost hope, but they came through. The process was smooth and well-organized.",
     },
     {
-        id: 15,
+        id: 10,
         name: "Chris W.",
         image: undefined,
         source: "Google",
         comment:
-            "Straightforward booking and honest service. The massage was great, and the therapist knew exactly what they were doing.",
+            "Straightforward process and an honest team. No unnecessary delays or confusion. They did exactly what they said they would do.",
     },
     {
-        id: 16,
+        id: 11,
         name: "Zainab H.",
         image: "/stack3.jpg",
         source: "Trustpilot",
         comment:
-            "Very smooth experience overall. The therapist was friendly, professional, and made the session incredibly relaxing.",
+            "Very smooth experience from start to finish. The support team was friendly and professional, and I felt reassured throughout the entire process.",
     },
     {
-        id: 17,
+        id: 12,
         name: "Brian C.",
         image: undefined,
         source: "Google",
         comment:
-            "They clearly know their craft. The massage relieved tension I’d been dealing with for days.",
+            "They clearly know what they're doing. I had tried other options before with no success, but Insiq delivered results where others couldn't.",
     },
     {
-        id: 18,
+        id: 13,
         name: "Ibrahim U.",
         image: "/stack2.jpg",
         source: "Reddit",
         comment:
-            "I was unsure at first, but the experience was excellent. Professional service and a deeply relaxing massage session.",
+            "I was skeptical at first, but after seeing the results, I can confidently say this is a legit service. They handled my case professionally and delivered as promised.",
     },
     {
-        id: 19,
+        id: 14,
         name: "Sophia R.",
         image: 'commentor7.png',
         source: "Google",
         comment:
-            "Very helpful and professional team. The massage was relaxing, and the whole process felt simple and stress-free.",
+            "Very helpful support team and quick turnaround time. They made the entire process feel simple and manageable.",
     },
     {
-        id: 20,
+        id: 15,
         name: "Kelvin P.",
         image: "/commentor8.png",
         source: "Trustpilot",
         comment:
-            "They handled everything with care. The massage was soothing, and I appreciated the attention to detail.",
+            "They handled my case with urgency and care. I appreciated how seriously they took my situation and how quickly they acted.",
     },
     {
-        id: 21,
+        id: 16,
         name: "Grace E.",
         image: undefined,
         source: "Google",
         comment:
-            "Clear communication and great service. The massage was relaxing, and the results were exactly what I needed.",
+            "Clear communication, professional approach, and real results. It's rare to find a service that actually delivers like this.",
     },
     {
-        id: 22,
+        id: 17,
         name: "Victor D.",
         image: "/commentor9.png",
         source: "Google",
         comment:
-            "Highly professional team. The massage session was well-executed, and I felt completely relaxed afterward.",
+            "Highly professional team. Everything was handled efficiently and with attention to detail. I would definitely use their services again if needed.",
     },
     {
-        id: 23,
+        id: 18,
         name: "Linda J.",
         image: undefined,
         source: "Trustpilot",
         comment:
-            "They made a stressful day much better. The massage was calming, and the support was excellent throughout.",
+            "They made a very stressful situation much easier to deal with. The support and reassurance they provided really stood out.",
     },
     {
-        id: 24,
+        id: 19,
         name: "Tunde F.",
         image: undefined,
         source: "Google",
         comment:
-            "Quick response and excellent service. The massage was relaxing, and I’m very satisfied with the experience.",
+            "Quick response, excellent service, and great communication. I'm very satisfied with the outcome.",
     },
     {
-        id: 25,
+        id: 20,
         name: "Amanda K.",
         image: 'commentor10.png',
         source: "Google",
         comment:
-            "Very reliable and professional. The massage was soothing, and the entire experience felt smooth and well-managed.",
+            "Very reliable and professional. They handled everything smoothly and delivered results. I'd recommend them to anyone needing recovery help.",
     },
 ];
 
