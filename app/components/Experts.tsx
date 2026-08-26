@@ -26,7 +26,7 @@ const experts = [
     name: "Isac Carpie",
     position: "Cybersecurity Expert",
     badge: "Expert",
-    image: "/Expert6.jpg",
+    image: "/worker3.jpg",
     bio: "Tracks and analyses encrypted transaction trails to identify threat actors.",
   },
   {
