@@ -16,7 +16,7 @@ const experts = [
     bio: "Has over 12 years of experience leading complex asset recovery operations.",
   },
   {
-    name: "Sofia Donavan",
+    name: "Nicolas Rob",
     position: "Digital Forensics Expert",
     badge: "Expert",
     image: "/team4.jpg",
